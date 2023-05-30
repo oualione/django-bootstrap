@@ -1,0 +1,23 @@
+{% extends 'layout/master.html' %}
+
+
+{% block body %}
+
+
+<div class="row">
+    <div class="col-md-12 mt-3 text-center">
+      <form method="POST">
+        {% csrf_token %}
+        <h3>ARE YOU SURE YOU WANT TO DELETE {{course.title}}</h3>
+        <button class="btn btn-danger">DELETE</button>
+      </form>  
+    </div>
+</div>
+
+    
+        
+    
+    
+    
+{% endblock body %}
+    

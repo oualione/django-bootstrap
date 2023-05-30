@@ -1,0 +1,21 @@
+{% extends 'layout/master.html' %}
+
+
+{% block body %}
+
+<div class="row mt-5">
+    <div class="col-md-6 mx-auto">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% load crispy_forms_tags %}
+            {{form|crispy}}
+            <p>If you have an account! <a href="/login">Click here</a></p>
+            <button class="btn btn-success" type="submit">Sign Up</button>
+        </form>
+
+        
+
+    </div>
+</div>
+
+{% endblock %}
