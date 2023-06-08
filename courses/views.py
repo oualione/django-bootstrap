@@ -178,7 +178,7 @@ def edit_course(request, id):
         if form.is_valid():
             form.save()
             sweetify.success(request, 'Course Updated Successfully')
-            return redirect("show_course", id=id)
+            return redirect("show_course", pk=id)
         else:
             return HttpResponse("Course not saved")
     else:
